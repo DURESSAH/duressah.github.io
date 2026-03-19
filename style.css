@@ -5,36 +5,41 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #111;
+    font-family: 'Poppins', sans-serif;
+    background: #30323D;
+    color: white;
 }
 
+/* HEADER */
 header {
     position: fixed;
     width: 100%;
-    top: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(48,50,61,0.9);
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    color: white;
+    padding: 15px 40px;
     z-index: 1000;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
+.logo img {
+    height: 40px;
 }
 
 nav a {
     color: white;
     margin-left: 25px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    color: #FEA00C;
+}
+
+/* HERO */
 .hero {
     height: 100vh;
-    background: url('images/hero.jpg') center/cover no-repeat;
+    background: url('images/project26.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,21 +47,25 @@ nav a {
 
 .overlay {
     text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     padding: 40px;
 }
 
+.overlay h1 {
+    color: #FEA00C;
+}
+
+/* SECTION */
 .section {
     padding: 100px 60px;
     text-align: center;
 }
 
 .dark {
-    background: #111;
-    color: white;
+    background: #1f2128;
 }
 
+/* CARDS */
 .cards {
     display: flex;
     justify-content: center;
@@ -65,11 +74,13 @@ nav a {
 }
 
 .card {
-    background: #222;
-    padding: 30px;
-    width: 200px;
+    background: #30323D;
+    border: 1px solid #FEA00C;
+    padding: 25px;
+    width: 250px;
 }
 
+/* GALLERY */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -79,16 +90,60 @@ nav a {
 .gallery img {
     width: 300px;
     margin: 10px;
-    transition: 0.3s;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
 }
 
+/* MODAL */
+#modal {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.9);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal img {
+    max-width: 90%;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
 footer {
-    background: black;
-    color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
+    background: black;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .section {
+        padding: 60px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .gallery img {
+        width: 90%;
+    }
 }
