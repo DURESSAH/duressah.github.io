@@ -7,15 +7,15 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header>
     <div class="logo">
-        <img src="images/project35.jpg" alt="logo">
+        <img src="images/project35.jpg">
     </div>
+
     <nav>
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -26,6 +26,9 @@
 
 <!-- HERO SLIDER -->
 <section class="hero">
+    <div class="slide active" style="background-image: url('images/project26.jpg')"></div>
+    <div class="slide" style="background-image: url('images/project28.jpg')"></div>
+
     <div class="overlay">
         <h1>TGAH General Construction & Design Work</h1>
         <p>Innovation • Quality • Precision</p>
@@ -35,27 +38,27 @@
 <!-- ABOUT -->
 <section id="about" class="section fade">
 <h2>About Us</h2>
+
 <p>
 TGAH General Construction and Design Work is a trusted name in Ethiopia’s construction sector, delivering innovative designs, high-quality construction, and reliable steel structure supply and installation.
-Since our establishment in 2014, we have built a strong reputation for completing projects on time, within budget, and to the highest industry standards.
+</p>
+
+<p>
+Since 2014, we have built a strong reputation for completing projects on time, within budget, and to the highest industry standards.
 </p>
 
 <h3>Mission</h3>
-<p>
-To deliver exceptional construction and design solutions that combine quality, safety, and efficiency, ensuring client satisfaction at every stage.
-</p>
+<p>To deliver exceptional construction solutions with quality, safety, and efficiency.</p>
 
 <h3>Vision</h3>
-<p>
-To be one of Ethiopia’s leading construction companies, recognized for innovation, integrity, and engineering excellence.
-</p>
+<p>To be one of Ethiopia’s leading construction companies.</p>
 
 <h3>Our Strengths</h3>
 <ul>
-<li>Over 10 years of proven industry experience</li>
-<li>Skilled team of engineers and architects</li>
-<li>Commitment to quality and safety</li>
-<li>Ability to handle projects of any scale</li>
+<li>10+ years experience</li>
+<li>Skilled engineers & architects</li>
+<li>High quality standards</li>
+<li>Handles projects of any scale</li>
 </ul>
 </section>
 
@@ -66,33 +69,33 @@ To be one of Ethiopia’s leading construction companies, recognized for innovat
 <div class="cards">
 <div class="card">
 <h3>Design & Engineering</h3>
-<p>Creative and sustainable designs for all project types.</p>
+<p>Creative and sustainable designs.</p>
 </div>
 
 <div class="card">
 <h3>Construction</h3>
-<p>Complete building solutions from start to finish.</p>
+<p>Complete building solutions.</p>
 </div>
 
 <div class="card">
 <h3>Steel Structures</h3>
-<p>Supply and professional installation of steel systems.</p>
+<p>Supply and installation.</p>
 </div>
 </div>
-
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section fade">
 <h2>Projects</h2>
 
-<div class="gallery">
-<img src="images/project26.jpg" onclick="openModal(this.src)">
-<img src="images/project28.jpg" onclick="openModal(this.src)">
-<img src="images/project1.jpg" onclick="openModal(this.src)">
-<img src="images/project2.jpg" onclick="openModal(this.src)">
+<div class="filters">
+<button onclick="filterSelection('all')">All</button>
+<button onclick="filterSelection('design')">Design</button>
+<button onclick="filterSelection('construction')">Construction</button>
+<button onclick="filterSelection('interior')">Interior</button>
 </div>
 
+<div class="gallery" id="gallery"></div>
 </section>
 
 <!-- CONTACT -->
@@ -106,12 +109,14 @@ To be one of Ethiopia’s leading construction companies, recognized for innovat
 <p>© 2026 TGAH General Construction & Design Work</p>
 </footer>
 
-<!-- IMAGE MODAL -->
+<!-- MODAL -->
 <div id="modal" onclick="closeModal()">
 <img id="modal-img">
 </div>
 
-<script src="script.js"></script>
+<!-- WHATSAPP -->
+<a href="https://wa.me/251913164774" class="whatsapp">💬</a>
 
+<script src="script.js"></script>
 </body>
 </html>
